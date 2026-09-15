@@ -175,6 +175,7 @@ def build_user_prompt(question):
 
 
 from eval_questions import EVAL_QUESTIONS
+
 eval_questions = EVAL_QUESTIONS
 
 out = open("results.jsonl", "a", encoding="utf-8")  # append: 재시도/추가실험이 기존 기록을 안 지움
@@ -194,6 +195,7 @@ for model in MODELS:
     result, ok = call_model(model, WARMUP_QUESTION)
 
     warmup_record = {
+        "run_id": f"{model}__warmup",
         "timestamp": datetime.now(timezone.utc).isoformat(),
         "model": model,
         "run_type": "warmup",
@@ -219,6 +221,7 @@ for model in MODELS:
                 success_count[model] = success_count[model] + 1
 
             record = {
+                "run_id": f"{model}__{q['id']}__rep{repeat_no}",
                 "timestamp": datetime.now(timezone.utc).isoformat(),
                 "model": model,
                 "run_type": RUN_TYPE,

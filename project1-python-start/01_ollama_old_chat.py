@@ -3,7 +3,7 @@ from datetime import datetime, timezone
 
 from ollama import Client
 
-MODEL = "exaone3.5:7.8b"
+MODEL = ["qwen2.5:7b", "exaone3.5:7.8b"]
 
 ARTICLE = """[[속보]퇴근길 주식거래 첫날인데…대형 증권사 잇단 전산장애]
 한국거래소(KRX)가 애프터마켓을 처음 개장하는 14일 국내 대형 증권사에서 잇따라 전산장애가 발생했다. KRX와 대체거래소 넥스트레이드(NXT) 중 투자자에게 유리한 시장으로 주문을 보내는 최선주문집행(SOR) 시스템에서 문제가 발생하면서 일부 투자자들이 주문 체결 조회와 취소 등에 불편을 겪었다.

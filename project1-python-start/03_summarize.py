@@ -94,6 +94,34 @@ print()
 print("=" * 60)
 print("5. 실행 조건 (모델별 대표값 1건 - main/success 중 첫 번째)")
 print("=" * 60)
+
+# ── 집계 결과를 summary.json 파일로도 저장 (다시 읽을 수 있는 형식) ──
+summary = {}
+for model in models:
+    main_records = [r for r in records if r["model"] == model and r["run_type"] == "main"]
+    total = len(main_records)
+    success = len([r for r in main_records if r["status"] == "success"])
+
+    main_success = [r for r in main_records if r["status"] == "success"]
+    wall_avg, wall_n = average([r["wall_clock_seconds"] for r in main_success])
+    tok_avg, tok_n = average([r["tokens_per_second"] for r in main_success])
+    vram_avg, vram_n = average([r["vram_used_mib"] for r in main_success])
+
+    summary[model] = {
+        "success_count": success,
+        "total_attempts": total,
+        "wall_clock_seconds_avg": wall_avg,
+        "wall_clock_seconds_n": wall_n,
+        "tokens_per_second_avg": tok_avg,
+        "tokens_per_second_n": tok_n,
+        "vram_used_mib_avg": vram_avg,
+        "vram_used_mib_n": vram_n,
+    }
+
+out = open("summary.json", "w", encoding="utf-8")
+out.write(json.dumps(summary, ensure_ascii=False, indent=2))
+out.close()
+print("(요약 결과가 summary.json 파일로도 저장되었습니다)")
 for model in models:
     main_success = [
         r for r in records

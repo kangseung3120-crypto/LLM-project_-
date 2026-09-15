@@ -1,0 +1,22 @@
+{
+  "qwen2.5:7b": {
+    "success_count": 20,
+    "total_attempts": 20,
+    "wall_clock_seconds_avg": 4.125,
+    "wall_clock_seconds_n": 20,
+    "tokens_per_second_avg": 62.765,
+    "tokens_per_second_n": 20,
+    "vram_used_mib_avg": 4528.1,
+    "vram_used_mib_n": 20
+  },
+  "exaone3.5:7.8b": {
+    "success_count": 20,
+    "total_attempts": 20,
+    "wall_clock_seconds_avg": 5.1995,
+    "wall_clock_seconds_n": 20,
+    "tokens_per_second_avg": 64.965,
+    "tokens_per_second_n": 20,
+    "vram_used_mib_avg": 4944.6,
+    "vram_used_mib_n": 20
+  }
+}
