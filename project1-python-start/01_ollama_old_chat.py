@@ -61,3 +61,4 @@ f.write(line + "\n")
 f.close()
 
 print("\n[저장] results.jsonl 에 결과 1건 추가됨")
+
