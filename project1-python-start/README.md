@@ -27,6 +27,7 @@ Ollama 태그	qwen2.5:7b	exaone3.5:7.8b
 체급이 거의 같은 두 모델(7.62B vs 7.8B)을 선정해 공정한 비교가 되도록 했습니다.
 
 Qwen2.5:7B (https://huggingface.co/Qwen/Qwen2.5-7B-Instruct)
+
 EXAONE3.5:7.8B (https://huggingface.co/LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct-AWQ)
 
 4. 평가 설계 (STEP 5·6)
