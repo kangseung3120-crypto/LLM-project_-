@@ -3,3 +3,5 @@ __pycache__/
 *.pyc
 .env
 .env.*
+results.jsonl
+results old.jsonl
