@@ -1,0 +1,13 @@
+{
+  "gpt-5.6-luna": {
+    "success_count": 5,
+    "total_attempts": 5,
+    "wall_clock_seconds_avg": 4.83,
+    "wall_clock_seconds_n": 5,
+    "input_tokens_avg": 1320.0,
+    "output_tokens_avg": 378.8,
+    "estimated_cost_usd_total": 0.003593,
+    "estimated_cost_usd_avg_per_call": 0.0007186,
+    "repeat_no": "1회 (로컬은 2회 - 반복 수 다름에 유의)"
+  }
+}
