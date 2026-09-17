@@ -154,7 +154,7 @@ python 05_summarize_cloud.py
 
 > 두 모델 모두 8GB VRAM 환경에서 CPU/GPU 분할 실행되었기 때문에 생성 속도의 차이를 양자화 수준의 차이만으로 단정하지 않았다.
 
-📊 **[Quantization 비교 결과 보기](./Quantization_비교표.md)**
+📊 **[Quantization 비교 결과 보기](./Embedding/Quantization_비교표.md)**
 
 ---
 
@@ -173,7 +173,7 @@ python 05_summarize_cloud.py
 
 > Cosine Similarity가 높다는 것이 문장의 사실 여부를 의미하는 것은 아니며, 의미적 유사도를 확인하는 지표로 사용하였다.
 
-📊 **[Embedding 비교 결과 보기](./embedding_비교표.md)**
+📊 **[Embedding 비교 결과 보기](./Embedding/embedding_비교표.md)**
 
 ---
 
